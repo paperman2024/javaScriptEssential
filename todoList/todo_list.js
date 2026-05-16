@@ -40,3 +40,14 @@ addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
 displayTasks();
+
+const body = document.body;
+const newButton = document.createElement("button");
+
+newButton.innerText = 'Reset All';
+newButton.onclick = () => {
+    tasks = [];
+    displayTasks();
+}
+
+body.appendChild(newButton);
